@@ -28,4 +28,15 @@ return [
     */
 
     'uri' => get_theme_file_uri().'/dist',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Assets Path
+    |--------------------------------------------------------------------------
+    |
+    | This is the abosolute path to assets--useful for things like inlining
+    | SVGs and the like.
+    |
+    */
+    'path' => get_theme_file_path().'/dist',
 ];

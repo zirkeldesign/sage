@@ -80,6 +80,17 @@ function asset_path($asset)
 }
 
 /**
+ * Get the absolute path to an asset.
+ *
+ * @param string $asset
+ * @return string
+ */
+function locate_asset($asset)
+{
+    return trailingslashit(config('assets.path')) . sage('assets')->get($asset);
+}
+
+/**
  * @param string|string[] $templates Possible template files
  * @return array
  */
