@@ -1,0 +1,4 @@
+@import "common/variables";
+
+/** Import a subset of our whole CSS to be inlined when CSS is not cached. */
+@import "common/global";

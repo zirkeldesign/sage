@@ -6,6 +6,9 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
+    ],
+    "critical": [
+      "./styles/critical.scss"
     ]
   },
   "publicPath": "/app/themes/sage",
