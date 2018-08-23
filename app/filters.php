@@ -101,3 +101,17 @@ add_filter('sage/template/app/data', function ($data) {
         'sf_submit_text' => esc_attr_x('Search', 'submit button', 'sage'),
     ];
 });
+
+add_filter('sage/preload/assets', function($array) {
+    /**
+     * To preload arbitrary assets, add them to the array passed here.
+     * Assets should be passed as an array, in the following format:
+     * `['url-of-assset', 'type-of-asset', 'MIME type']`
+     * The asset type is limited to a pre-set list (see link).
+     * The MIME type parameter is optional, but can help the browser
+     * decide what to download.
+     *
+     * @link https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content#What_types_of_content_can_be_preloaded
+     */
+    return $array;
+});

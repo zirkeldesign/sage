@@ -169,6 +169,20 @@ add_action('wp_footer', function () {
 }, 99);
 
 /**
+ * Preload arbitrary assets.
+ */
+add_action('wp_head', function() {
+    $assets = collect(apply_filters('sage/preload/assets', []));
+    $assets->map(function($asset) {
+        $allowed = ['audio', 'document', 'embed', 'fetch', 'font', 'image', 'object', 'script', 'style', 'track', 'worker', 'video'];
+        if (in_array($asset[1], $allowed)) {
+            $type = isset($asset[2]) ? "type='{$asset[2]}'" : null;
+            echo "<link rel='preload' href='{$asset[0]}' as='$asset[1]' $type>";
+        }
+    });
+}, 1);
+
+/**
  * Register sidebars
  */
 add_action('widgets_init', function () {
