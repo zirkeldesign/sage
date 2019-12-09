@@ -40,7 +40,11 @@
   },
   "require": {
     "php": "^7.2",
-    "roots/acorn": "dev-master"
+    "log1x/acf-composer": "^1.0",
+    "log1x/poet": "^1.0",
+    "log1x/sage-directives": "^1.1",
+    "roots/acorn": "dev-master",
+    "stoutlogic/acf-builder": "^1.8"
   },
   "require-dev": {
     "filp/whoops": "^2.5",

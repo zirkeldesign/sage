@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48d1202a28af3ab72597bbac2b79b5e3",
+    "content-hash": "1b5b075beb0c3fcf20a4e6385ecdca38",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -72,6 +72,62 @@
                 "string"
             ],
             "time": "2019-10-30T19:59:35+00:00"
+        },
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/ae466f726242e637cebdd526a7d991b9433bacf1",
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^6.0",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.13",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpstan/phpstan-shim": "^0.11",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "http://ocramius.github.com/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "time": "2019-10-21T16:45:58+00:00"
         },
         {
             "name": "illuminate/cache",
@@ -560,6 +616,66 @@
             "time": "2019-11-08T13:18:30+00:00"
         },
         {
+            "name": "johnbillion/extended-cpts",
+            "version": "4.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johnbillion/extended-cpts.git",
+                "reference": "6446170b222869e1e0770c130ead47def5261b51"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johnbillion/extended-cpts/zipball/6446170b222869e1e0770c130ead47def5261b51",
+                "reference": "6446170b222869e1e0770c130ead47def5261b51",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "automattic/phpcs-neutron-standard": "^1.5",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5",
+                "johnbillion/falsey-assertequals-detector": "^2",
+                "johnbillion/php-docs-standards": "^1",
+                "phpcompatibility/phpcompatibility-wp": "^2",
+                "phpunit/phpunit": "^6",
+                "roots/wordpress": "*",
+                "vlucas/phpdotenv": "^3",
+                "wp-cli/wp-cli-bundle": "^2.1",
+                "wp-coding-standards/wpcs": "^2",
+                "wp-phpunit/wp-phpunit": "*"
+            },
+            "suggest": {
+                "seravo/wp-custom-bulk-actions": "Custom Bulk Actions",
+                "wpackagist-plugin/rewrite-testing": "Rewrite Rule Testing"
+            },
+            "type": "library",
+            "extra": {
+                "wordpress-install-dir": "tests/wordpress"
+            },
+            "autoload": {
+                "psr-4": {
+                    "ExtCPTs\\Tests\\": "tests/phpunit"
+                },
+                "files": [
+                    "extended-cpts.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "John Blackbourn",
+                    "homepage": "https://johnblackbourn.com/"
+                }
+            ],
+            "description": "A library which provides extended functionality to WordPress custom post types and taxonomies.",
+            "homepage": "https://github.com/johnbillion/extended-cpts/",
+            "time": "2019-08-25T21:14:07+00:00"
+        },
+        {
             "name": "league/flysystem",
             "version": "1.0.57",
             "source": {
@@ -642,6 +758,160 @@
                 "storage"
             ],
             "time": "2019-10-16T21:01:05+00:00"
+        },
+        {
+            "name": "log1x/acf-composer",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/acf-composer.git",
+                "reference": "2ab9afb26baaa14b678b75a8e5bc1dde769faae1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/acf-composer/zipball/2ab9afb26baaa14b678b75a8e5bc1dde769faae1",
+                "reference": "2ab9afb26baaa14b678b75a8e5bc1dde769faae1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.4"
+            },
+            "suggest": {
+                "log1x/sage-directives": "Provides Sage-specific Blade directives for use with WordPress and ACF within your views.",
+                "stoutlogic/acf-builder": "Provides an essential fluid interface for creating ACF fields."
+            },
+            "type": "package",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "Log1x\\AcfComposer\\Providers\\AcfComposerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Log1x\\AcfComposer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "ACF Composer assists you with creating Fields and Blocks with ACF Builder and Roots Sage",
+            "time": "2019-11-13T05:13:31+00:00"
+        },
+        {
+            "name": "log1x/poet",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/poet.git",
+                "reference": "dfd766a834088ec035ffb2f3ffa45eb045935393"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/poet/zipball/dfd766a834088ec035ffb2f3ffa45eb045935393",
+                "reference": "dfd766a834088ec035ffb2f3ffa45eb045935393",
+                "shasum": ""
+            },
+            "require": {
+                "johnbillion/extended-cpts": "^4.3",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "package",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "Log1x\\Poet\\PoetServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Log1x\\Poet\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "Configuration-based post types and taxonomies for Sage 10.",
+            "keywords": [
+                "custom-post-types",
+                "custom-taxonomies",
+                "wordpress"
+            ],
+            "time": "2019-11-10T09:11:15+00:00"
+        },
+        {
+            "name": "log1x/sage-directives",
+            "version": "v1.1.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/sage-directives.git",
+                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
+                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1.3"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "suggest": {
+                "log1x/sage-svg": "Required to use the @svg directive (Sage 10)."
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "src/Directives.php",
+                    "src/Utilities.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "A set of Blade directives for use with Roots Sage.",
+            "homepage": "https://github.com/log1x/sage-directives",
+            "keywords": [
+                "blade",
+                "blade-directives",
+                "directives",
+                "roots",
+                "sage",
+                "wordpress"
+            ],
+            "time": "2019-12-02T15:02:22+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1045,6 +1315,49 @@
             ],
             "homepage": "https://github.com/roots/support/",
             "time": "2019-01-28T09:46:14+00:00"
+        },
+        {
+            "name": "stoutlogic/acf-builder",
+            "version": "1.8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/StoutLogic/acf-builder.git",
+                "reference": "14c923e7f2aa3bccf64fa0ec8be4bde9af333d60"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/StoutLogic/acf-builder/zipball/14c923e7f2aa3bccf64fa0ec8be4bde9af333d60",
+                "reference": "14c923e7f2aa3bccf64fa0ec8be4bde9af333d60",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/inflector": "^1.1",
+                "doctrine/instantiator": "^1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "2.*",
+                "phpunit/phpunit": "4.*",
+                "squizlabs/php_codesniffer": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "StoutLogic\\AcfBuilder\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Steve Pfisterer",
+                    "email": "steve@stoutlogic.com"
+                }
+            ],
+            "description": "An Advanced Custom Field Configuration Builder",
+            "time": "2019-12-06T19:52:47+00:00"
         },
         {
             "name": "symfony/console",
