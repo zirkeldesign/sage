@@ -1,12 +1,5 @@
-/** Config */
-@import 'config/variables';
-@import 'config/external';
+@tailwind base;
 
-/** Common */
-@import 'common/global';
+@tailwind components;
 
-/** Components */
-@import 'components';
-
-/** Partials */
-@import 'partials/header';
+@tailwind utilities;
