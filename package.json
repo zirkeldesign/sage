@@ -30,6 +30,7 @@
     "babel-eslint": "^10.0.3",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.0.1",
+    "chroma-js": "^2.1.0",
     "cross-env": "^6.0.3",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.18.2",
@@ -47,9 +48,12 @@
     "stylelint": "^12.0.0",
     "stylelint-config-standard": "^19.0.0",
     "tailwindcss": "^1.1.4",
+    "typeface-arbutus-slab": "^0.0.72",
+    "typeface-open-sans": "^0.0.75",
     "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
+    "@zirkeldesign/tailwind-gutenberg-components": "file:.yalc/@zirkeldesign/tailwind-gutenberg-components",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.0"

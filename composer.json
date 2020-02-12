@@ -41,10 +41,13 @@
   "require": {
     "php": "^7.2",
     "log1x/acf-composer": "^1.0",
+    "log1x/modern-acf-options": "^1.0",
+    "log1x/modern-login": "^1.0",
     "log1x/poet": "^1.0",
     "log1x/sage-directives": "^1.1",
     "roots/acorn": "dev-master",
-    "stoutlogic/acf-builder": "^1.8"
+    "stoutlogic/acf-builder": "^1.8",
+    "zirkeldesign/sage-wpgraphql": "dev-master"
   },
   "require-dev": {
     "filp/whoops": "^2.5",
@@ -68,5 +71,11 @@
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]
+  },
+  "repositories": {
+    "local": {
+      "type": "path",
+      "url": "/Users/dcsturm/wrk/packages/composer/sage-wpgraphql"
+    }
   }
 }
