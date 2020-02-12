@@ -1,7 +1,7 @@
-const mix = require("laravel-mix");
-require("laravel-mix-copy-watched");
-require("laravel-mix-purgecss");
-require("@tinypixelco/laravel-mix-wp-blocks");
+const mix = require('laravel-mix');
+            require('@tinypixelco/laravel-mix-wp-blocks');
+            require('laravel-mix-purgecss');
+            require('laravel-mix-copy-watched');
 
 /*
  |--------------------------------------------------------------------------
@@ -27,9 +27,8 @@ mix
   .blocks("resources/assets/scripts/editor.js", "scripts")
   .extract();
 
-mix
-  .copyWatched("resources/assets/images", "dist/images")
-  .copyWatched("resources/assets/fonts", "dist/fonts");
+mix.copyWatched('resources/assets/images/**', 'dist/images')
+   .copyWatched('resources/assets/fonts/**', 'dist/fonts');
 
 mix.autoload({
   jquery: ["$", "window.jQuery"],
