@@ -20,6 +20,9 @@ return [
             'supports' => ['title', 'editor', 'author', 'revisions', 'thumbnail'],
             'show_in_rest' => true,
             'has_archive' => false,
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'Tariff',
+            'graphql_plural_name' => 'Tariffs',
             'labels' => [
                 'singular' => 'Tariff',
                 'plural' => 'Tariffs',
@@ -45,6 +48,9 @@ return [
     'taxonomy' => [
         'tariff_type' => [
             'links' => ['tariff'],
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'TariffType',
+            'graphql_plural_name' => 'TariffTypes',
             'meta_box' => 'radio',
             'hierarchical' => false,
         ],

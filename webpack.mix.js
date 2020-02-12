@@ -14,7 +14,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.setPublicPath("./dist").browserSync("cms.gruenstromwerk.local");
+mix.setPublicPath("./dist").browserSync("https://gsw.zd");
 
 mix
   .sass("resources/assets/styles/app.scss", "styles")
