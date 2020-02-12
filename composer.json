@@ -46,8 +46,7 @@
     "log1x/poet": "^1.0",
     "log1x/sage-directives": "^1.1",
     "roots/acorn": "dev-master",
-    "stoutlogic/acf-builder": "^1.8",
-    "zirkeldesign/sage-wpgraphql": "dev-master"
+    "stoutlogic/acf-builder": "^1.8"
   },
   "require-dev": {
     "filp/whoops": "^2.7",
@@ -71,11 +70,5 @@
     "post-autoload-dump": [
       "Roots\\Acorn\\ComposerScripts::postAutoloadDump"
     ]
-  },
-  "repositories": {
-    "local": {
-      "type": "path",
-      "url": "/Users/dcsturm/wrk/packages/composer/sage-wpgraphql"
-    }
   }
 }
