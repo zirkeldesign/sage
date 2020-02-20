@@ -28,3 +28,11 @@ add_filter(
         return $api;
     }
 );
+
+add_filter(
+    'wpsrd_post_types_list',
+    function ($postTypes) {
+        $postTypes[] = 'tariff';
+        return $postTypes;
+    }
+);
