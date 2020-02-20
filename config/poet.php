@@ -28,6 +28,15 @@ return [
                 'plural' => 'Tariffs',
             ],
             'admin_cols' => [
+                'tariff_featured_image' => [
+                    'title'          => 'Header',
+                    'featured_image' => 'thumbnail'
+                ],
+                'tariff_type' => [
+                    'taxonomy' => 'tariff_type'
+                ],
+            ],
+            'admin_filters' => [
                 'tariff_type' => [
                     'taxonomy' => 'tariff_type'
                 ],
@@ -51,6 +60,14 @@ return [
             'show_in_graphql' => true,
             'graphql_single_name' => 'TariffType',
             'graphql_plural_name' => 'TariffTypes',
+            'meta_box' => 'radio',
+            'hierarchical' => false,
+        ],
+        'tariff_partner' => [
+            'links' => ['tariff'],
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'TariffPartner',
+            'graphql_plural_name' => 'TariffPartners',
             'meta_box' => 'radio',
             'hierarchical' => false,
         ],
