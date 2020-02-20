@@ -21,7 +21,9 @@ class TariffPartner extends Field
         $field = new FieldsBuilder('tariff_partner', $defaults + ['graphql_field_name' => 'tariffPartner']);
 
         $field
-            ->addImage('logo', $defaults);
+            ->addText('short_name', $defaults)
+            ->addImage('logo', $defaults)
+            ->addLink('website');
 
         $field
             ->setLocation('taxonomy', '==', 'tariff_partner');

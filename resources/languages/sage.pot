@@ -1,0 +1,147 @@
+# Copyright (C) 2020 Daniel Sturm
+# This file is distributed under the MIT License.
+msgid ""
+msgstr ""
+"Project-Id-Version: ZD WP Grünstromwerk 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/zd-wp-theme-gruenstromwerk-sage-10\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-20T14:31:58+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+
+#. Theme Name of the theme
+msgid "ZD WP Grünstromwerk"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://gruenstromwerk.de"
+msgstr ""
+
+#. Description of the theme
+msgid "WordPress theme for gruenstromwerk.de based on Sage."
+msgstr ""
+
+#. Author of the theme
+msgid "Daniel Sturm"
+msgstr ""
+
+#. Author URI of the theme
+msgid "https://zirkel.design/"
+msgstr ""
+
+#: app/Blocks/Hero.php:25
+msgid "Hero"
+msgstr ""
+
+#: app/Blocks/Hero.php:26
+msgid "Adds an hero component"
+msgstr ""
+
+#: app/Composers/Post.php:48
+msgid "Latest Posts"
+msgstr ""
+
+#: app/Composers/Post.php:58
+msgid "Search Results for %s"
+msgstr ""
+
+#: app/Composers/Post.php:64
+msgid "Not Found"
+msgstr ""
+
+#: app/filters.php:19
+msgid "Continued"
+msgstr ""
+
+#: app/setup.php:78
+msgid "Primary Navigation"
+msgstr ""
+
+#: app/setup.php:79
+msgid "Footer Navigation"
+msgstr ""
+
+#: app/setup.php:118
+#: app/setup.php:139
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:144
+msgid "Footer"
+msgstr ""
+
+#: config/poet.php:17
+msgid "Enter tariff name"
+msgstr ""
+
+#: config/poet.php:27
+#: config/poet.php:28
+msgctxt "CPT label"
+msgid "Tariff"
+msgid_plural "Tariffs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: config/poet.php:32
+msgid "Header"
+msgstr ""
+
+#: config/poet.php:66
+#: config/poet.php:67
+msgctxt "CPT label"
+msgid "Type"
+msgid_plural "Types"
+msgstr[0] ""
+msgstr[1] ""
+
+#: config/poet.php:78
+#: config/poet.php:79
+msgctxt "CPT label"
+msgid "Partner"
+msgid_plural "Partners"
+msgstr[0] ""
+msgstr[1] ""
+
+#: functions.php:15
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: functions.php:25
+msgid "You must be using PHP 7.2 or greater."
+msgstr ""
+
+#: functions.php:25
+msgid "Invalid PHP version"
+msgstr ""
+
+#: functions.php:32
+msgid "You must be using WordPress 5.2 or greater."
+msgstr ""
+
+#: functions.php:32
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: functions.php:40
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: functions.php:41
+msgid "Autoloader not found."
+msgstr ""
+
+#: functions.php:56
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: functions.php:57
+msgid "File not found"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Custom Template"
+msgstr ""
