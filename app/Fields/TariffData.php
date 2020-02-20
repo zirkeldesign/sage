@@ -53,10 +53,14 @@ class TariffData extends Field
 
         $field
             ->addAccordion('region')
-            ->addGoogleMap('location', $defaults)
+            ->addGoogleMap('location', $defaults);
+
+        $field
             ->addAccordion('partner')
-            ->addText('name', $defaults)
-            ->addImage('logo', $defaults);
+            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'radio', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
+
+        $field
+            ->addAccordion('energy_savings');
 
         $field
             ->setLocation('post_type', '==', 'tariff');

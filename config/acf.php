@@ -14,6 +14,7 @@ return [
 
     'fields' => [
         App\Fields\TariffData::class,
+        App\Fields\TariffPartner::class,
     ],
 
     /*
