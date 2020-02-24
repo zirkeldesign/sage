@@ -36,15 +36,15 @@ class IconList extends Block
      */
     public function fields()
     {
-        $tarifffeatures = new FieldsBuilder('tarifffeatures');
+        $field = new FieldsBuilder('icon_list');
 
-        $tarifffeatures
-            ->addRepeater('items')
+        $field
+            ->addRepeater('items', ['min' => 1, 'max' => 10])
             ->addText('icon')
             ->addText('content')
             ->endRepeater();
 
-        return $tarifffeatures->build();
+        return $field->build();
     }
 
     /**
@@ -77,7 +77,7 @@ class IconList extends Block
             ],
             [
                 'icon' => 'icon-bag',
-                'content' => 'Wir liefern Ihnen Strom aus Solar- und Windkraftwerken im Umkreis von 50 Kilometern.',
+                'content' => 'Sie stärken langfristig die Wirtschaft in Ihrer Region.',
             ],
         ];
     }
