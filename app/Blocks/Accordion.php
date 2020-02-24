@@ -3,6 +3,7 @@
 namespace App\Blocks;
 
 use Log1x\AcfComposer\Block;
+use Illuminate\Support\Str;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 class Accordion extends Block
@@ -39,7 +40,16 @@ class Accordion extends Block
         $field = new FieldsBuilder('accordion');
 
         $field
-            ->addAccordion('accordion');
+            ->addTab('general')
+            ->addSelect('title_tag')
+            ->addChoices('h3', 'h4', 'h5', 'b', 'span')
+            ->addTab('items')
+            ->addRepeater('items', ['layout' => 'row', 'min' => 1])
+            ->addText('title')
+            ->addWysiwyg('content')
+            ->addText('id')
+            ->addTrueFalse('is_open')
+            ->endRepeater();
 
         return $field->build();
     }
@@ -52,6 +62,7 @@ class Accordion extends Block
     public function with()
     {
         return [
+            'title_tag' => \get_field('title_tag') ?? 'h3',
             'items' => $this->items(),
         ];
     }
@@ -63,19 +74,13 @@ class Accordion extends Block
      */
     public function items()
     {
-        return \get_field('items') ?? [
-            [
-                'icon' => 'icon-bag',
-                'content' => 'Wir liefern Ihnen Strom aus Solar- und Windkraftwerken im Umkreis von 50 Kilometern.',
-            ],
-            [
-                'icon' => 'icon-bag',
-                'content' => 'Sie unterstützen so das Umweltengagement vor Ort.',
-            ],
-            [
-                'icon' => 'icon-bag',
-                'content' => 'Wir liefern Ihnen Strom aus Solar- und Windkraftwerken im Umkreis von 50 Kilometern.',
-            ],
-        ];
+        return collect(\get_field('items') ?? [])->map(
+            function ($item) {
+                if (!$item['id'] && trim($item['title'])) {
+                    $item['id'] = Str::slug($item['title']);
+                }
+                return $item;
+            }
+        );
     }
 }

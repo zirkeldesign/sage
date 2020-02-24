@@ -28,6 +28,7 @@ return [
     */
 
     'blocks' => [
+        App\Blocks\Accordion::class,
         App\Blocks\Hero::class,
         App\Blocks\IconList::class,
     ],
