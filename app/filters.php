@@ -36,3 +36,22 @@ add_filter(
         return $postTypes;
     }
 );
+
+add_filter(
+    'option_wp_graphql_gutenberg_block_types',
+    function ($block_types) {
+        $index = array_search('core/pullquote', array_column($block_types, 'name'));
+        if (false !== $index) {
+            $block_type = $block_types[$index];
+            $deprecated_attributes = array_column($block_type['deprecated'], 'attributes');
+            foreach ($deprecated_attributes as $i => $deprecated_set) {
+                if (\array_key_exists('figureStyle', $deprecated_set)) {
+                    unset($block_type['deprecated'][$i]['attributes']['figureStyle']);
+                }
+            }
+            $block_types[$index] = $block_type;
+        }
+        return $block_types;
+    },
+    10
+);
