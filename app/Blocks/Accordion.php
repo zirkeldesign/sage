@@ -24,9 +24,11 @@ class Accordion extends Block
     public function register()
     {
         return [
-            'name' => 'Accordion',
-            'description' => 'Displays an accordion',
-            'category' => 'formatting',
+            'name'        => __('Accordion'),
+            'description' => __('Displays an accordion'),
+            'icon'        => '<svg viewBox="0 0 24 24"><path d="M1 6v12h22V6zm7 3h8v2H8zm8 7H8v-1h8zm2-2H6v-1h12z"/></svg>',
+            'category'    => 'layout',
+            'mode'        => 'auto',
         ];
     }
 

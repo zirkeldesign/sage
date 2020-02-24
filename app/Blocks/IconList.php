@@ -23,9 +23,11 @@ class IconList extends Block
     public function register()
     {
         return [
-            'name' => 'Icon List',
-            'description' => 'Displays a list with icons',
-            'category' => 'formatting',
+            'name'        => __('Icon List'),
+            'description' => __('Displays a list with icons'),
+            'icon'        => '<svg viewBox="0 0 24 24"><path d="M1 6v12h22V6zm7 3h8v2H8zm8 7H8v-1h8zm2-2H6v-1h12z"/></svg>',
+            'category'    => 'layout',
+            'mode'        => 'auto',
         ];
     }
 
