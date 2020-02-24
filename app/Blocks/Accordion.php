@@ -64,8 +64,9 @@ class Accordion extends Block
     public function with()
     {
         return [
-            'title_tag' => \get_field('title_tag') ?? 'h3',
             'items' => $this->items(),
+            'type' => 'single', // or: 'multiple'
+            'title_tag' => \get_field('title_tag') ?? 'h3',
         ];
     }
 
