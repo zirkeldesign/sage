@@ -53,6 +53,7 @@ class TariffData extends Field
 
         $field
             ->addAccordion('region')
+            ->addWysiwyg('content', $defaults)
             ->addGoogleMap('location', $defaults);
 
         $field
