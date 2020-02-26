@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8e75dd1f8205c71f092ec2a930e304d",
+    "content-hash": "ce137b1ee4689391e3a2cfd126c8e163",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -131,16 +131,16 @@
         },
         {
             "name": "illuminate/cache",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/cache.git",
-                "reference": "2669ff4aa3575401f3ae55fe4049f6d5efb221ff"
+                "reference": "aef0dd6fc8b73f853cf88d2cadac8eb89d337d65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/cache/zipball/2669ff4aa3575401f3ae55fe4049f6d5efb221ff",
-                "reference": "2669ff4aa3575401f3ae55fe4049f6d5efb221ff",
+                "url": "https://api.github.com/repos/illuminate/cache/zipball/aef0dd6fc8b73f853cf88d2cadac8eb89d337d65",
+                "reference": "aef0dd6fc8b73f853cf88d2cadac8eb89d337d65",
                 "shasum": ""
             },
             "require": {
@@ -178,11 +178,11 @@
             ],
             "description": "The Illuminate Cache package.",
             "homepage": "https://laravel.com",
-            "time": "2020-02-04T13:59:03+00:00"
+            "time": "2020-02-24T17:40:55+00:00"
         },
         {
             "name": "illuminate/config",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/config.git",
@@ -226,7 +226,7 @@
         },
         {
             "name": "illuminate/console",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/console.git",
@@ -277,7 +277,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -321,7 +321,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -365,7 +365,7 @@
         },
         {
             "name": "illuminate/events",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
@@ -410,16 +410,16 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
-                "reference": "58c1d87e80f72bc09201107553a08471577fbe79"
+                "reference": "799a3af9435458d56e9f3647e09e11ffc9ace896"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/58c1d87e80f72bc09201107553a08471577fbe79",
-                "reference": "58c1d87e80f72bc09201107553a08471577fbe79",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/799a3af9435458d56e9f3647e09e11ffc9ace896",
+                "reference": "799a3af9435458d56e9f3647e09e11ffc9ace896",
                 "shasum": ""
             },
             "require": {
@@ -458,11 +458,11 @@
             ],
             "description": "The Illuminate Filesystem package.",
             "homepage": "https://laravel.com",
-            "time": "2020-01-28T14:30:01+00:00"
+            "time": "2020-02-25T14:02:04+00:00"
         },
         {
             "name": "illuminate/log",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/log.git",
@@ -507,16 +507,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "2f5f449750e6821f2d8c4e993a4ff77c7d7d5cc8"
+                "reference": "468b76701a1caf8859b2af7c770a3f293c4f065b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/2f5f449750e6821f2d8c4e993a4ff77c7d7d5cc8",
-                "reference": "2f5f449750e6821f2d8c4e993a4ff77c7d7d5cc8",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/468b76701a1caf8859b2af7c770a3f293c4f065b",
+                "reference": "468b76701a1caf8859b2af7c770a3f293c4f065b",
                 "shasum": ""
             },
             "require": {
@@ -564,11 +564,11 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2020-02-14T14:20:14+00:00"
+            "time": "2020-02-24T17:34:22+00:00"
         },
         {
             "name": "illuminate/view",
-            "version": "v6.16.0",
+            "version": "v6.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/view.git",
@@ -930,16 +930,16 @@
         },
         {
             "name": "log1x/sage-directives",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/sage-directives.git",
-                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746"
+                "reference": "433f3a499d6414783e34b9304ba76ec4d20a38eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
-                "reference": "a6b05e6bb9b82ed4efd6ea1a96b3c017d783f746",
+                "url": "https://api.github.com/repos/Log1x/sage-directives/zipball/433f3a499d6414783e34b9304ba76ec4d20a38eb",
+                "reference": "433f3a499d6414783e34b9304ba76ec4d20a38eb",
                 "shasum": ""
             },
             "require": {
@@ -978,7 +978,61 @@
                 "sage",
                 "wordpress"
             ],
-            "time": "2019-12-02T15:02:22+00:00"
+            "time": "2020-02-21T00:47:30+00:00"
+        },
+        {
+            "name": "log1x/sage-svg",
+            "version": "v1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/sage-svg.git",
+                "reference": "074f8e13f73b8a7026dfcda46c1c76b18f56e677"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/sage-svg/zipball/074f8e13f73b8a7026dfcda46c1c76b18f56e677",
+                "reference": "074f8e13f73b8a7026dfcda46c1c76b18f56e677",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "package",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "Log1x\\SageSvg\\SageSvgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Log1x\\SageSvg\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "A simple package for using inline SVGs in Sage 10 projects.",
+            "keywords": [
+                "sage",
+                "svg",
+                "wordpress"
+            ],
+            "time": "2019-11-28T13:40:54+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -1281,12 +1335,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/roots/acorn.git",
-                "reference": "c41c6e9d1b9d361046572869d14a694015a2d94b"
+                "reference": "2e2146ca17168d5f7a888b8e22dc3a506fc9e293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/roots/acorn/zipball/c41c6e9d1b9d361046572869d14a694015a2d94b",
-                "reference": "c41c6e9d1b9d361046572869d14a694015a2d94b",
+                "url": "https://api.github.com/repos/roots/acorn/zipball/2e2146ca17168d5f7a888b8e22dc3a506fc9e293",
+                "reference": "2e2146ca17168d5f7a888b8e22dc3a506fc9e293",
                 "shasum": ""
             },
             "require": {
@@ -1344,7 +1398,7 @@
                 "sage",
                 "wordpress"
             ],
-            "time": "2020-02-12T00:51:55+00:00"
+            "time": "2020-02-21T16:31:26+00:00"
         },
         {
             "name": "roots/support",
