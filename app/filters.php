@@ -37,15 +37,32 @@ add_filter(
     }
 );
 
+// add_filter(
+//     'soil/relative-url-filters',
+//     function ( $root_rel_filters ) {
+//         if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')) {
+//             $root_rel_filters = array_diff($root_rel_filters, ['the_permalink', 'wp_get_attachment_url']);
+//         }
+
+//         return $root_rel_filters;
+//     },
+//     10,
+//     1
+// );
+
 add_filter(
-    'soil/relative-url-filters',
-    function ( $root_rel_filters ) {
-        if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')) {
-            $root_rel_filters = array_diff($root_rel_filters, ['the_permalink', 'wp_get_attachment_url']);
+    'wp_get_attachment_image_src',
+    function ( $image, $attachment_id ) {
+        if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')
+            && 0 === strpos($image, '/app/uploads/')
+        ) {
+            $image = \str_replace('/app/uploads/', '/', $image);
         }
+
+        return $image;
     },
     10,
-    1
+    2
 );
 
 add_filter(
