@@ -38,6 +38,17 @@ add_filter(
 );
 
 add_filter(
+    'soil/relative-url-filters',
+    function ( $root_rel_filters ) {
+        if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')) {
+            $root_rel_filters = array_diff($root_rel_filters, ['the_permalink', 'wp_get_attachment_url']);
+        }
+    },
+    10,
+    1
+);
+
+add_filter(
     'option_wp_graphql_gutenberg_block_types',
     function ($block_types) {
         $index = array_search('core/pullquote', array_column($block_types, 'name'));
