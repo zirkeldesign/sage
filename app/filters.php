@@ -54,9 +54,11 @@ add_filter(
     'wp_get_attachment_image_src',
     function ( $image, $attachment_id ) {
         if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')
-            && 0 === strpos($image, '/app/uploads/')
+            && $image
+            && isset($image[0])
+            && 0 === strpos($image[0], '/app/uploads/')
         ) {
-            $image = \str_replace('/app/uploads/', '/', $image);
+            $image[0] = \str_replace('/app/uploads/', '/', $image[0]);
         }
 
         return $image;
