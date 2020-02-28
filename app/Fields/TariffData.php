@@ -59,7 +59,7 @@ class TariffData extends Field
 
         $field
             ->addAccordion('partner')
-            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'radio', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
+            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'select', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
             ->addAccordion('energy_savings');
