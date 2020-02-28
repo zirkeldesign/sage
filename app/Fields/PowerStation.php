@@ -22,7 +22,7 @@ class PowerStation extends Field
 
         $field
             ->addSelect('type', $defaults)
-                ->addChoices('', ['water' => 'Water'], ['solar' => 'Solar'])
+            ->addChoices('', ['wind' => __('Wind', 'sage')], ['water' => __('Water', 'sage')], ['solar' => __('Solar', 'sage')])
             ->addGoogleMap('location', $defaults);
 
         $field
