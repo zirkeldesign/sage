@@ -41,7 +41,7 @@ class TariffData extends Field
             ->addRepeater(
                 'quotes',
                 $defaults + [
-                    'button_label' => 'Add Quote',
+                    'button_label' => sprintf(__('Add %s', 'sage'), __('Quote', 'sage')),
                     'layout' => 'row'
                 ]
             )
@@ -54,7 +54,8 @@ class TariffData extends Field
         $field
             ->addAccordion('region')
             ->addWysiwyg('content', $defaults)
-            ->addGoogleMap('location', $defaults);
+            ->addGoogleMap('location', $defaults)
+            ->addTaxonomy('power_station', $defaults + ['field_type' => 'radio', 'taxonomy' => 'power_station', 'allow_null' => 0, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
             ->addAccordion('partner')

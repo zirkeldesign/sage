@@ -24,8 +24,8 @@ return [
             'graphql_single_name' => 'Tariff',
             'graphql_plural_name' => 'Tariffs',
             'labels' => [
-                'singular' => _nx( 'Tariff', 'Tariffs', 1, 'CPT label', 'sage'),
-                'plural' => _nx( 'Tariff', 'Tariffs', 2, 'CPT label', 'sage'),
+                'singular' => _nx('Tariff', 'Tariffs', 1, 'CPT label', 'sage'),
+                'plural' => _nx('Tariff', 'Tariffs', 2, 'CPT label', 'sage'),
             ],
             'admin_cols' => [
                 'tariff_featured_image' => [
@@ -63,8 +63,8 @@ return [
             'meta_box' => 'radio',
             'hierarchical' => false,
             'labels' => [
-                'singular' => _nx( 'Type', 'Types', 1, 'CPT label', 'sage'),
-                'plural' => _nx( 'Type', 'Types', 2, 'CPT label', 'sage'),
+                'singular' => _nx('Type', 'Types', 1, 'CPT label', 'sage'),
+                'plural' => _nx('Type', 'Types', 2, 'CPT label', 'sage'),
             ],
         ],
         'tariff_partner' => [
@@ -75,8 +75,20 @@ return [
             'meta_box' => 'radio',
             'hierarchical' => false,
             'labels' => [
-                'singular' => _nx( 'Partner', 'Partners', 1, 'CPT label', 'sage'),
-                'plural' => _nx( 'Partner', 'Partners', 2, 'CPT label', 'sage'),
+                'singular' => _nx('Partner', 'Partners', 1, 'CPT label', 'sage'),
+                'plural' => _nx('Partner', 'Partners', 2, 'CPT label', 'sage'),
+            ],
+        ],
+        'power_station' => [
+            'links' => ['tariff'],
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'PowerStation',
+            'graphql_plural_name' => 'PowerStations',
+            'meta_box' => 'radio',
+            'hierarchical' => false,
+            'labels' => [
+                'singular' => _nx('Power station', 'Power stations', 1, 'CPT label', 'sage'),
+                'plural' => _nx('Power station', 'Power stations', 2, 'CPT label', 'sage'),
             ],
         ],
     ],

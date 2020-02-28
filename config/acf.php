@@ -13,6 +13,7 @@ return [
     */
 
     'fields' => [
+        App\Fields\PowerStation::class,
         App\Fields\TariffData::class,
         App\Fields\TariffPartner::class,
     ],
