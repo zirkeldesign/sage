@@ -23,6 +23,9 @@ return [
             'show_in_graphql' => true,
             'graphql_single_name' => 'Tariff',
             'graphql_plural_name' => 'Tariffs',
+            'rewrite' => [
+                'permastruct' => '/%tariff_type%/%tariff%/'
+            ],
             'labels' => [
                 'singular' => _nx('Tariff', 'Tariffs', 1, 'CPT label', 'sage'),
                 'plural' => _nx('Tariff', 'Tariffs', 2, 'CPT label', 'sage'),
