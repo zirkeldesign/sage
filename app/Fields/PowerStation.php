@@ -21,6 +21,8 @@ class PowerStation extends Field
         $field = new FieldsBuilder('power_station', $defaults + ['graphql_field_name' => 'powerStation']);
 
         $field
+            ->addSelect('type', $defaults)
+                ->addChoices('', ['water' => 'Water'], ['solar' => 'Solar'])
             ->addGoogleMap('location', $defaults);
 
         $field
