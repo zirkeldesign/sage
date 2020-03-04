@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ce137b1ee4689391e3a2cfd126c8e163",
+    "content-hash": "9f845390ce185ead497ae477f719d7ff",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2096,6 +2096,55 @@
                 "dump"
             ],
             "time": "2020-01-25T15:56:29+00:00"
+        },
+        {
+            "name": "tiny-pixel/acorn-block-templates",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pixelcollective/acorn-block-templates.git",
+                "reference": "2ae13d938badaf3f37860277c2a12ece09529ced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pixelcollective/acorn-block-templates/zipball/2ae13d938badaf3f37860277c2a12ece09529ced",
+                "reference": "2ae13d938badaf3f37860277c2a12ece09529ced",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "type": "package",
+            "extra": {
+                "acorn": {
+                    "providers": [
+                        "TinyPixel\\BlockTemplates\\Providers\\BlockTemplatesServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TinyPixel\\BlockTemplates\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kelly Mears",
+                    "email": "kelly@tinypixel.dev"
+                }
+            ],
+            "description": "Block templates for Sage 10",
+            "keywords": [
+                "acorn",
+                "gutenberg",
+                "sage",
+                "wordpress"
+            ],
+            "time": "2020-02-08T00:36:42+00:00"
         }
     ],
     "packages-dev": [
@@ -2215,7 +2264,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "roots/acorn": 20
+        "roots/acorn": 20,
+        "tiny-pixel/acorn-block-templates": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

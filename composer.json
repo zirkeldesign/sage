@@ -47,7 +47,8 @@
     "log1x/sage-directives": "^1.1",
     "log1x/sage-svg": "^1.0",
     "roots/acorn": "dev-master",
-    "stoutlogic/acf-builder": "^1.8"
+    "stoutlogic/acf-builder": "^1.8",
+    "tiny-pixel/acorn-block-templates": "dev-master"
   },
   "require-dev": {
     "filp/whoops": "^2.7",

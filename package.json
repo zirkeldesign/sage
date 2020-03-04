@@ -40,6 +40,7 @@
     "laravel-mix-purgecss": "^4.2.0",
     "laravel-mix-tailwind": "^0.1.0",
     "npm-run-all": "^4.1",
+    "palette-webpack-plugin": "^1.0.0",
     "rimraf": "^3.0",
     "sass": "^1.24.0",
     "sass-loader": "^8.0.0",
