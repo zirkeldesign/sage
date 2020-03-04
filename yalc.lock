@@ -1,9 +1,0 @@
-{
-  "version": "v1",
-  "packages": {
-    "@zirkeldesign/tailwind-gutenberg-components": {
-      "signature": "8e4119302f6aefa91bc8ace91669db0a",
-      "file": true
-    }
-  }
-}
