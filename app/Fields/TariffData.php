@@ -52,6 +52,21 @@ class TariffData extends Field
             ->endRepeater();
 
         $field
+            ->addAccordion('images')
+            ->addRepeater(
+                'images',
+                $defaults + [
+                    'button_label' => sprintf(__('Add %s', 'sage'), __('Image', 'sage')),
+                    'layout' => 'row',
+                    'max' => 3
+                ]
+            )
+            ->addImage('image', $defaults)
+            ->addTextarea('description', $defaults)
+            ->addText('title', $defaults)
+            ->endRepeater();
+
+        $field
             ->addAccordion('region')
             ->addWysiwyg('content', $defaults)
             ->addGoogleMap('location', $defaults)
@@ -59,7 +74,7 @@ class TariffData extends Field
 
         $field
             ->addAccordion('partner')
-            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'select', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
+            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'multi_select', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
             ->addAccordion('energy_savings');
