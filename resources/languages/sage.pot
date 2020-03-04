@@ -2,14 +2,14 @@
 # This file is distributed under the MIT License.
 msgid ""
 msgstr ""
-"Project-Id-Version: ZD WP Grünstromwerk 0.1.0\n"
+"Project-Id-Version: ZD WP Grünstromwerk 0.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/zd-wp-theme-gruenstromwerk-sage-10\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-02-20T14:31:58+00:00\n"
+"POT-Creation-Date: 2020-03-04T14:56:47+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 
@@ -33,12 +33,28 @@ msgstr ""
 msgid "https://zirkel.design/"
 msgstr ""
 
+#: app/Blocks/Accordion.php:27
+msgid "Accordion"
+msgstr ""
+
+#: app/Blocks/Accordion.php:28
+msgid "Displays an accordion"
+msgstr ""
+
 #: app/Blocks/Hero.php:25
 msgid "Hero"
 msgstr ""
 
 #: app/Blocks/Hero.php:26
 msgid "Adds an hero component"
+msgstr ""
+
+#: app/Blocks/IconList.php:26
+msgid "Icon List"
+msgstr ""
+
+#: app/Blocks/IconList.php:27
+msgid "Displays a list with icons"
 msgstr ""
 
 #: app/Composers/Post.php:48
@@ -51,6 +67,31 @@ msgstr ""
 
 #: app/Composers/Post.php:64
 msgid "Not Found"
+msgstr ""
+
+#: app/Fields/PowerStation.php:25
+msgid "Wind"
+msgstr ""
+
+#: app/Fields/PowerStation.php:25
+msgid "Water"
+msgstr ""
+
+#: app/Fields/PowerStation.php:25
+msgid "Solar"
+msgstr ""
+
+#: app/Fields/TariffData.php:44
+#: app/Fields/TariffData.php:59
+msgid "Add %s"
+msgstr ""
+
+#: app/Fields/TariffData.php:44
+msgid "Quote"
+msgstr ""
+
+#: app/Fields/TariffData.php:59
+msgid "Image"
 msgstr ""
 
 #: app/filters.php:19
@@ -78,31 +119,39 @@ msgstr ""
 msgid "Enter tariff name"
 msgstr ""
 
-#: config/poet.php:27
-#: config/poet.php:28
+#: config/poet.php:30
+#: config/poet.php:31
 msgctxt "CPT label"
 msgid "Tariff"
 msgid_plural "Tariffs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: config/poet.php:32
+#: config/poet.php:35
 msgid "Header"
 msgstr ""
 
-#: config/poet.php:66
-#: config/poet.php:67
+#: config/poet.php:69
+#: config/poet.php:70
 msgctxt "CPT label"
 msgid "Type"
 msgid_plural "Types"
 msgstr[0] ""
 msgstr[1] ""
 
-#: config/poet.php:78
-#: config/poet.php:79
+#: config/poet.php:81
+#: config/poet.php:82
 msgctxt "CPT label"
 msgid "Partner"
 msgid_plural "Partners"
+msgstr[0] ""
+msgstr[1] ""
+
+#: config/poet.php:93
+#: config/poet.php:94
+msgctxt "CPT label"
+msgid "Power station"
+msgid_plural "Power stations"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -144,4 +193,32 @@ msgstr ""
 
 #. Template Name of the theme
 msgid "Custom Template"
+msgstr ""
+
+#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:3
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:4
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr ""
+
+#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:7
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: storage/framework/views/5defcf1697a20ac5e97cc4c0e64122a497ef833a.php:7
+msgid "By"
+msgstr ""
+
+#: storage/framework/views/643ce7adffcade8cd7adabd7ff39cea1fb5d46cf.php:6
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr ""
+
+#: storage/framework/views/6714330fe8f323780de1c83a68f753dc143c2c97.php:16
+#: storage/framework/views/af97e8e13b0db81c64bd72bcb8048b234f342d5b.php:2
+msgid "Pages:"
 msgstr ""
