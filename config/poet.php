@@ -13,6 +13,14 @@ return [
     */
 
     'post' => [
+        'wp_block' => [
+            '_builtin'        => false,
+            'show_in_menu'    => true,
+            'show_in_graphql' => true,
+            'graphql_single_name' => 'WpBlock',
+            'graphql_plural_name' => 'WpBlocks',
+            'menu_icon'       => 'dashicons-layout',
+        ],
         'tariff' => [
             'enter_title_here'    => __('Enter tariff name', 'sage'),
             'menu_position'       => 20,
