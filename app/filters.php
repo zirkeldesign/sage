@@ -52,7 +52,7 @@ add_filter(
 
 add_filter(
     'wp_get_attachment_image_src',
-    function ( $image, $attachment_id ) {
+    function ( $image ) {
         if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')
             && $image
             && isset($image[0])
@@ -64,7 +64,17 @@ add_filter(
         return $image;
     },
     10,
-    2
+    1
+);
+
+
+add_filter(
+    'wp_calculate_image_srcset', function ($sources) {
+        foreach ((array) $sources as $source => $src) {
+            $sources[$source]['url'] = \network_home_url() . $src['url'];
+        }
+        return $sources;
+    }, 20
 );
 
 add_filter(
