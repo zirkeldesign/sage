@@ -3,7 +3,7 @@
   @include('partials.head')
 
   <body @php(body_class())>
-    <div id="app" class="flex flex-col min-h-screen layout font-body">
+    <div id="app" class="flex flex-col flex-grow min-h-screen layout font-body">
       @php(wp_body_open())
       @php(do_action('get_header'))
       @include('partials.header')
