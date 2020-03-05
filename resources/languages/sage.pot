@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-03-04T14:56:47+00:00\n"
+"POT-Creation-Date: 2020-03-05T11:34:01+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 
@@ -42,6 +42,7 @@ msgid "Displays an accordion"
 msgstr ""
 
 #: app/Blocks/Hero.php:25
+#: config/poet.php:35
 msgid "Hero"
 msgstr ""
 
@@ -106,12 +107,11 @@ msgstr ""
 msgid "Footer Navigation"
 msgstr ""
 
-#: app/setup.php:118
-#: app/setup.php:139
+#: app/setup.php:144
 msgid "Primary"
 msgstr ""
 
-#: app/setup.php:144
+#: app/setup.php:149
 msgid "Footer"
 msgstr ""
 
@@ -127,29 +127,37 @@ msgid_plural "Tariffs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: config/poet.php:35
+#: config/poet.php:32
+msgid "Add New"
+msgstr ""
+
+#: config/poet.php:34
+msgid "Tariff name"
+msgstr ""
+
+#: config/poet.php:38
 msgid "Header"
 msgstr ""
 
-#: config/poet.php:69
-#: config/poet.php:70
-msgctxt "CPT label"
+#: config/poet.php:72
+#: config/poet.php:73
+msgctxt "CT label"
 msgid "Type"
 msgid_plural "Types"
 msgstr[0] ""
 msgstr[1] ""
 
-#: config/poet.php:81
-#: config/poet.php:82
-msgctxt "CPT label"
+#: config/poet.php:84
+#: config/poet.php:85
+msgctxt "CT label"
 msgid "Partner"
 msgid_plural "Partners"
 msgstr[0] ""
 msgstr[1] ""
 
-#: config/poet.php:93
-#: config/poet.php:94
-msgctxt "CPT label"
+#: config/poet.php:96
+#: config/poet.php:97
+msgctxt "CT label"
 msgid "Power station"
 msgid_plural "Power stations"
 msgstr[0] ""
@@ -195,30 +203,6 @@ msgstr ""
 msgid "Custom Template"
 msgstr ""
 
-#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:3
-msgctxt "label"
-msgid "Search for:"
-msgstr ""
-
-#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:4
-msgctxt "placeholder"
-msgid "Search &hellip;"
-msgstr ""
-
-#: storage/framework/views/07035f33544e1fefbc521bdede93ee394aa9d2e1.php:7
-msgctxt "submit button"
-msgid "Search"
-msgstr ""
-
-#: storage/framework/views/5defcf1697a20ac5e97cc4c0e64122a497ef833a.php:7
-msgid "By"
-msgstr ""
-
-#: storage/framework/views/643ce7adffcade8cd7adabd7ff39cea1fb5d46cf.php:6
-msgid "Sorry, but the page you were trying to view does not exist."
-msgstr ""
-
-#: storage/framework/views/6714330fe8f323780de1c83a68f753dc143c2c97.php:16
 #: storage/framework/views/af97e8e13b0db81c64bd72bcb8048b234f342d5b.php:2
 msgid "Pages:"
 msgstr ""
