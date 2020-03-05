@@ -1,7 +1,8 @@
 const mix = require('laravel-mix');
-            require('@tinypixelco/laravel-mix-wp-blocks');
-            require('laravel-mix-purgecss');
-            require('laravel-mix-copy-watched');
+require('@tinypixelco/laravel-mix-wp-blocks');
+require('laravel-mix-purgecss');
+require('laravel-mix-copy-watched');
+require("palette-webpack-plugin/src/mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ const mix = require('laravel-mix');
 
 mix.setPublicPath("./dist").browserSync("https://gsw.zd");
 
+mix.setResourceRoot(process.env.MIX_RESOURCE_ROOT);
+
 mix
   .sass("resources/assets/styles/app.scss", "styles")
   .sass("resources/assets/styles/editor.scss", "styles")
@@ -29,6 +32,22 @@ mix
 
 mix.copyWatched('resources/assets/images/**', 'dist/images')
    .copyWatched('resources/assets/fonts/**', 'dist/fonts');
+
+mix.palette({
+  output: "palette.json",
+  blacklist: ["transparent", "inherit"],
+  priority: "tailwind",
+  pretty: false,
+  tailwind: {
+    config: "./tailwind.config.js",
+    shades: false,
+  },
+  // sass: {
+  //   path: "resources/assets/styles/config",
+  //   files: ["variables.scss"],
+  //   variables: ["colors"]
+  // }
+});
 
 mix.autoload({
   jquery: ["$", "window.jQuery"],
