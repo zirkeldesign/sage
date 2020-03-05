@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/zd-wp-theme-"
 "gruenstromwerk-sage-10\n"
 "POT-Creation-Date: 2020-03-05T11:34:01+00:00\n"
-"PO-Revision-Date: 2020-03-05 12:34+0100\n"
+"PO-Revision-Date: 2020-03-05 12:36+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -129,7 +129,7 @@ msgstr[1] "Tarife"
 
 #: config/poet.php:32
 msgid "Add New"
-msgstr "Neu hinzufügen"
+msgstr "Erstellen"
 
 #: config/poet.php:34
 msgid "Tariff name"
