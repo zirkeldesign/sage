@@ -116,6 +116,17 @@ add_action('after_setup_theme', function () {
     add_theme_support('editor-color-palette', json_decode(asset('palette.json')->contents(), true));
 }, 20);
 
+add_action( 'after_setup_theme', function() {
+    /**
+     * Add language config / translation.
+     */
+    load_theme_textdomain('sage', get_stylesheet_directory() . '/resources/languages');
+
+    add_action('wp_enqueue_scripts', function () {
+        wp_set_script_translations('sage/main.js', 'sage', get_stylesheet_directory() . '/resources/languages');
+    }, 100);
+}, 1, 10 );
+
 /**
  * Register the theme sidebars.
  *
