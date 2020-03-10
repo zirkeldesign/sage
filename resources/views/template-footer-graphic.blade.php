@@ -1,5 +1,5 @@
 {{--
-  Template Name: Custom Template
+  Template Name: Footer graphic
 --}}
 
 @extends('layouts.app')
