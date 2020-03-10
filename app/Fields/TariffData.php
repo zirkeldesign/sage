@@ -68,8 +68,9 @@ class TariffData extends Field
 
         $field
             ->addAccordion('region')
-            ->addWysiwyg('content', $defaults)
             ->addGoogleMap('location', $defaults)
+            ->addImage('map', $defaults)
+            ->addWysiwyg('content', $defaults)
             ->addTaxonomy('power_station', $defaults + ['field_type' => 'multi_select', 'taxonomy' => 'power_station', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
