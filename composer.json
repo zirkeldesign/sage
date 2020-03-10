@@ -48,6 +48,8 @@
     "log1x/sage-svg": "^1.0",
     "roots/acorn": "dev-master",
     "stoutlogic/acf-builder": "^1.8",
+    "symfony/css-selector": "^5.0",
+    "symfony/dom-crawler": "^5.0",
     "tiny-pixel/acorn-block-templates": "dev-master"
   },
   "require-dev": {
