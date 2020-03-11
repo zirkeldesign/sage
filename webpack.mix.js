@@ -18,14 +18,14 @@ require("palette-webpack-plugin/src/mix");
 mix.setPublicPath("./dist").browserSync("https://gsw.zd");
 
 mix.setResourceRoot(process.env.MIX_RESOURCE_ROOT);
+mix.sass('resources/assets/styles/app.scss', 'styles')
+   .sass('resources/assets/styles/editor.scss', 'styles')
+   .purgeCss({
+     whitelist: require('purgecss-with-wordpress').whitelist,
+     whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
+   });
 
-mix
-  .sass("resources/assets/styles/app.scss", "styles")
-  .sass("resources/assets/styles/editor.scss", "styles")
-  .purgeCss();
-
-mix
-  .js("resources/assets/scripts/app.js", "scripts")
+mix.js("resources/assets/scripts/app.js", "scripts")
   .js("resources/assets/scripts/customizer.js", "scripts")
   .blocks("resources/assets/scripts/editor.js", "scripts")
   .extract();
