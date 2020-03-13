@@ -12,14 +12,16 @@ namespace App;
  * @return string
  */
 add_filter(
-    'excerpt_more', function () {
+    'excerpt_more',
+    function () {
         return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
     }
 );
 
 add_filter(
-    'acf/fields/google_map/api', function ($api) {
-        if (env('GOOGLE_MAPS_KEY')) {
+    'acf/fields/google_map/api',
+    function ( $api ) {
+        if (env('GOOGLE_MAPS_KEY') ) {
             $api['key'] = env('GOOGLE_MAPS_KEY');
         }
         return $api;
@@ -28,31 +30,32 @@ add_filter(
 
 add_filter(
     'wpsrd_post_types_list',
-    function ($postTypes) {
+    function ( $postTypes ) {
         $postTypes[] = 'tariff';
         return $postTypes;
     }
 );
 
-// add_filter(
-//     'soil/relative-url-filters',
-//     function ( $root_rel_filters ) {
-//         if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')) {
-//             $root_rel_filters = array_diff($root_rel_filters, ['the_permalink', 'wp_get_attachment_url']);
-//         }
+add_filter(
+    'the_content',
+    function ( $content ) {
+        if (!is_graphql()) {
+            return $content;
+        }
 
-//         return $root_rel_filters;
-//     },
-//     10,
-//     1
-// );
+        $content = \str_replace('="/app/uploads/', '="' . \network_home_url() . '/app/uploads/', $content);
+        return $content;
+    }
+);
 
 add_filter(
     'wp_get_attachment_image_src',
     function ( $image ) {
-        if (false !== strpos($_SERVER['REQUEST_URI'], '/graphql')
-            && $image
-            && isset($image[0])
+        if (!is_graphql()) {
+            return $image;
+        }
+
+        if (isset($image[0])
             && 0 === strpos($image[0], '/app/uploads/')
         ) {
             $image[0] = \str_replace('/app/uploads/', '/', $image[0]);
@@ -66,27 +69,29 @@ add_filter(
 
 
 add_filter(
-    'wp_calculate_image_srcset', function ($sources) {
-        foreach ((array) $sources as $source => $src) {
-            $sources[$source]['url'] = \network_home_url() . $src['url'];
+    'wp_calculate_image_srcset',
+    function ( $sources ) {
+        foreach ( (array) $sources as $source => $src ) {
+            $sources[ $source ]['url'] = \network_home_url() . $src['url'];
         }
         return $sources;
-    }, 20
+    },
+    20
 );
 
 add_filter(
     'option_wp_graphql_gutenberg_block_types',
-    function ($block_types) {
+    function ( $block_types ) {
         $index = array_search('core/pullquote', array_column($block_types, 'name'));
-        if (false !== $index) {
-            $block_type = $block_types[$index];
+        if (false !== $index ) {
+            $block_type            = $block_types[ $index ];
             $deprecated_attributes = array_column($block_type['deprecated'], 'attributes');
-            foreach ($deprecated_attributes as $i => $deprecated_set) {
-                if (\array_key_exists('figureStyle', $deprecated_set)) {
-                    unset($block_type['deprecated'][$i]['attributes']['figureStyle']);
+            foreach ( $deprecated_attributes as $i => $deprecated_set ) {
+                if (\array_key_exists('figureStyle', $deprecated_set) ) {
+                    unset($block_type['deprecated'][ $i ]['attributes']['figureStyle']);
                 }
             }
-            $block_types[$index] = $block_type;
+            $block_types[ $index ] = $block_type;
         }
         return $block_types;
     },
