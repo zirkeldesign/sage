@@ -14,7 +14,7 @@ class Accordion extends Block
      *
      * @var array
      */
-    protected $post_types = [];
+    public $post_types = [];
 
     /**
      * Data to be passed to the block before registering.
