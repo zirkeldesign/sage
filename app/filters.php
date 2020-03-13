@@ -36,48 +36,44 @@ add_filter(
     }
 );
 
-add_filter(
-    'the_content',
-    function ( $content ) {
-        if (!is_graphql()) {
+if (is_graphql()) {
+
+
+    add_filter(
+        'the_content',
+        function ( $content ) {
+            $content = \str_replace('="/app/uploads/', '="' . \network_home_url() . '/app/uploads/', $content);
             return $content;
         }
+    );
 
-        $content = \str_replace('="/app/uploads/', '="' . \network_home_url() . '/app/uploads/', $content);
-        return $content;
-    }
-);
+    add_filter(
+        'wp_get_attachment_image_src',
+        function ( $image ) {
+            if (isset($image[0])
+                && 0 === strpos($image[0], '/app/uploads/')
+            ) {
+                $image[0] = \str_replace('/app/uploads/', '/', $image[0]);
+            }
 
-add_filter(
-    'wp_get_attachment_image_src',
-    function ( $image ) {
-        if (!is_graphql()) {
             return $image;
-        }
-
-        if (isset($image[0])
-            && 0 === strpos($image[0], '/app/uploads/')
-        ) {
-            $image[0] = \str_replace('/app/uploads/', '/', $image[0]);
-        }
-
-        return $image;
-    },
-    10,
-    1
-);
+        },
+        10,
+        1
+    );
 
 
-add_filter(
-    'wp_calculate_image_srcset',
-    function ( $sources ) {
-        foreach ( (array) $sources as $source => $src ) {
-            $sources[ $source ]['url'] = \network_home_url() . $src['url'];
-        }
-        return $sources;
-    },
-    20
-);
+    add_filter(
+        'wp_calculate_image_srcset',
+        function ( $sources ) {
+            foreach ( (array) $sources as $source => $src ) {
+                $sources[ $source ]['url'] = \network_home_url() . $src['url'];
+            }
+            return $sources;
+        },
+        20
+    );
+}
 
 add_filter(
     'option_wp_graphql_gutenberg_block_types',
