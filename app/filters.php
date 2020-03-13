@@ -37,8 +37,6 @@ add_filter(
 );
 
 if (is_graphql()) {
-
-
     add_filter(
         'the_content',
         function ( $content ) {
@@ -61,7 +59,6 @@ if (is_graphql()) {
         10,
         1
     );
-
 
     add_filter(
         'wp_calculate_image_srcset',
