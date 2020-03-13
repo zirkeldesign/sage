@@ -761,16 +761,16 @@
         },
         {
             "name": "log1x/acf-composer",
-            "version": "v1.2.0",
+            "version": "v1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Log1x/acf-composer.git",
-                "reference": "4218fdbd05ed2d981992cc40e0dfac823dab2f3b"
+                "reference": "6b18d332b5bd593267e682543b265e349c13f492"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Log1x/acf-composer/zipball/4218fdbd05ed2d981992cc40e0dfac823dab2f3b",
-                "reference": "4218fdbd05ed2d981992cc40e0dfac823dab2f3b",
+                "url": "https://api.github.com/repos/Log1x/acf-composer/zipball/6b18d332b5bd593267e682543b265e349c13f492",
+                "reference": "6b18d332b5bd593267e682543b265e349c13f492",
                 "shasum": ""
             },
             "require": {
@@ -814,7 +814,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-03-12T03:25:14+00:00"
+            "time": "2020-03-13T10:44:20+00:00"
         },
         {
             "name": "log1x/modern-acf-options",
