@@ -14,71 +14,64 @@ class TariffData extends Field
      */
     public function fields()
     {
-        $defaults = [
-            'show_in_grapqhl' => 1,
-        ];
-
-        $field = new FieldsBuilder('tariff', $defaults + ['graphql_field_name' => 'tariffData']);
+        $field = new FieldsBuilder('tariff', ['graphql_field_name' => 'tariffData']);
 
         $field
             ->addAccordion('general')
-            ->addTaxonomy('tariff_type', $defaults + ['field_type' => 'radio', 'taxonomy' => 'tariff_type', 'allow_null' => 0, 'add_term' => 0, 'save_terms' => 1, 'load_terms' => 1])
-            ->addText('subline', $defaults)
-            ->addTrueFalse('show_widget', $defaults + ['default_value' => 1])
+            ->addTaxonomy('tariff_type', ['field_type' => 'radio', 'taxonomy' => 'tariff_type', 'allow_null' => 0, 'add_term' => 0, 'save_terms' => 1, 'load_terms' => 1])
+            ->addText('subline')
+            ->addTrueFalse('show_widget', ['default_value' => 1])
             ->addRepeater(
                 'features',
-                $defaults + [
+                [
                     'button_label' => 'Add Feature',
                     'layout' => 'row'
                 ]
             )
-            ->addText('icon', $defaults)
-            ->addText('content', $defaults)
+            ->addText('icon')
+            ->addText('content')
             ->endRepeater();
 
         $field
             ->addAccordion('testimonials')
             ->addRepeater(
                 'quotes',
-                $defaults + [
+                [
                     'button_label' => sprintf(__('Add %s', 'sage'), __('Quote', 'sage')),
                     'layout' => 'row'
                 ]
             )
-            ->addTextarea('content', $defaults)
-            ->addText('source', $defaults)
-            ->addText('source_append', $defaults)
-            ->addImage('image', $defaults)
+            ->addTextarea('content')
+            ->addText('source')
+            ->addText('source_append')
+            ->addImage('image')
             ->endRepeater();
 
         $field
             ->addAccordion('images')
             ->addRepeater(
                 'images',
-                $defaults + [
+                [
                     'button_label' => sprintf(__('Add %s', 'sage'), __('Image', 'sage')),
                     'layout' => 'row',
                     'max' => 3
                 ]
             )
-            ->addImage('image', $defaults)
-            ->addTextarea('description', $defaults)
-            ->addText('title', $defaults)
+            ->addImage('image')
+            ->addTextarea('description')
+            ->addText('title')
             ->endRepeater();
 
         $field
             ->addAccordion('region')
-            ->addGoogleMap('location', $defaults)
-            ->addImage('map', $defaults)
-            ->addWysiwyg('content', $defaults)
-            ->addTaxonomy('power_station', $defaults + ['field_type' => 'multi_select', 'taxonomy' => 'power_station', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
+            ->addGoogleMap('location')
+            ->addImage('map')
+            ->addWysiwyg('content')
+            ->addTaxonomy('power_station', ['field_type' => 'multi_select', 'taxonomy' => 'power_station', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
             ->addAccordion('partner')
-            ->addTaxonomy('tariff_partner', $defaults + ['field_type' => 'multi_select', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
-
-        $field
-            ->addAccordion('energy_savings');
+            ->addTaxonomy('tariff_partner', ['field_type' => 'multi_select', 'taxonomy' => 'tariff_partner', 'allow_null' => 1, 'add_term' => 1, 'save_terms' => 1, 'load_terms' => 1]);
 
         $field
             ->setLocation('post_type', '==', 'tariff');

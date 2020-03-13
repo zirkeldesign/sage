@@ -49,7 +49,7 @@ return [
     */
 
     'defaults' => [
-        'fieldGroup' => ['instruction_placement' => 'acfe_instructions_tooltip'],
+        'fieldGroup' => ['instruction_placement' => 'acfe_instructions_tooltip', 'show_in_grapqhl' => 1],
         'repeater' => ['layout' => 'block', 'acfe_repeater_stylised_button' => 1],
         'postObject' => ['ui' => 1, 'return_format' => 'object'],
         'accordion' => ['multi_expand' => 1],
