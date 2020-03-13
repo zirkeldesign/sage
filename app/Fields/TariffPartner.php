@@ -14,15 +14,11 @@ class TariffPartner extends Field
      */
     public function fields()
     {
-        $defaults = [
-            'show_in_grapqhl' => 1,
-        ];
-
-        $field = new FieldsBuilder('tariff_partner', $defaults + ['graphql_field_name' => 'tariffPartner']);
+        $field = new FieldsBuilder('tariff_partner', ['graphql_field_name' => 'tariffPartner']);
 
         $field
-            ->addText('short_name', $defaults)
-            ->addImage('logo', $defaults)
+            ->addText('short_name')
+            ->addImage('logo')
             ->addLink('website');
 
         $field

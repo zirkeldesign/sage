@@ -14,16 +14,12 @@ class PowerStation extends Field
      */
     public function fields()
     {
-        $defaults = [
-            'show_in_grapqhl' => 1,
-        ];
-
-        $field = new FieldsBuilder('power_station', $defaults + ['graphql_field_name' => 'powerStation']);
+        $field = new FieldsBuilder('power_station', ['graphql_field_name' => 'powerStation']);
 
         $field
-            ->addSelect('type', $defaults)
+            ->addSelect('type')
             ->addChoices('', ['wind' => __('Wind', 'sage')], ['water' => __('Water', 'sage')], ['solar' => __('Solar', 'sage')])
-            ->addGoogleMap('location', $defaults);
+            ->addGoogleMap('location');
 
         $field
             ->setLocation('taxonomy', '==', 'power_station');
