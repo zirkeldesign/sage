@@ -49,6 +49,12 @@ return [
     */
 
     'defaults' => [
+        'fieldGroup' => ['instruction_placement' => 'acfe_instructions_tooltip'],
+        'repeater' => ['layout' => 'block', 'acfe_repeater_stylised_button' => 1],
+        'postObject' => ['ui' => 1, 'return_format' => 'object'],
+        'accordion' => ['multi_expand' => 1],
+        'group' => ['layout' => 'table', 'acfe_group_modal' => 1],
+        'tab' => ['placement' => 'left'],
         'trueFalse' => ['ui' => 1],
         'select' => ['ui' => 1],
     ],
