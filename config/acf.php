@@ -4,38 +4,6 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Standard Fields
-    |--------------------------------------------------------------------------
-    |
-    | The fields listed here will be automatically loaded on the
-    | request to your application.
-    |
-    */
-
-    'fields' => [
-        App\Fields\PowerStation::class,
-        App\Fields\TariffData::class,
-        App\Fields\TariffPartner::class,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Gutenberg Blocks
-    |--------------------------------------------------------------------------
-    |
-    | The Gutenberg blocks listed here will be automatically loaded on the
-    | request to your application.
-    |
-    */
-
-    'blocks' => [
-        App\Blocks\Accordion::class,
-        App\Blocks\Hero::class,
-        App\Blocks\IconList::class,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
     | Default Field Type Settings
     |--------------------------------------------------------------------------
     |

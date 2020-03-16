@@ -2,12 +2,46 @@
 
 namespace App\Blocks;
 
-use Log1x\AcfComposer\Block;
 use Illuminate\Support\Str;
+use Log1x\AcfComposer\Block;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 class Accordion extends Block
 {
+    /**
+     * The display name of the block.
+     *
+     * @var string
+     */
+    public $name = 'Accordion';
+
+    /**
+     * The description of the block.
+     *
+     * @var string
+     */
+    public $description = 'Displays an accordion';
+
+    /**
+     * The category this block belongs to.
+     *
+     * @var string
+     */
+    public $category = 'layout';
+
+    /**
+     * The icon of this block.
+     *
+     * @var string|array
+     */
+    public $icon = '<svg viewBox="0 0 24 24"><path d="M1 6v12h22V6zm7 3h8v2H8zm8 7H8v-1h8zm2-2H6v-1h12z"/></svg>';
+
+    /**
+     * An array of block keywords.
+     *
+     * @var array
+     */
+    public $keywords = [];
 
     /**
      * An array of post types the block will be available to.
@@ -17,23 +51,53 @@ class Accordion extends Block
     public $post_types = [];
 
     /**
-     * Data to be passed to the block before registering.
+     * The default display mode of the block that is shown to the user.
+     *
+     * @var string
+     */
+    public $mode = 'preview';
+
+    /**
+     * The block alignment class.
+     *
+     * @var string
+     */
+    public $align = '';
+
+    /**
+     * Features supported by the block.
+     *
+     * @var array
+     */
+    public $supports = [];
+
+    /**
+     * Data to be passed to the rendered block.
      *
      * @return array
      */
-    public function register()
+    public function with()
     {
         return [
-            'name'        => __('Accordion'),
-            'description' => __('Displays an accordion'),
-            'icon'        => '<svg viewBox="0 0 24 24"><path d="M1 6v12h22V6zm7 3h8v2H8zm8 7H8v-1h8zm2-2H6v-1h12z"/></svg>',
-            'category'    => 'layout',
-            'mode'        => 'auto',
+            'items'     => $this->items(),
+            'type'      => 'single',                          // or: 'multiple'
+            'title_tag' => \get_field('title_tag') ?? 'h3',
+            'padding'   => 0,
         ];
     }
 
     /**
-     * Fields to be attached to the block.
+     * Assets to be enqueued when rendering the block.
+     *
+     * @return void
+     */
+    public function enqueue()
+    {
+        //
+    }
+
+    /**
+     * The block field group.
      *
      * @return array
      */
@@ -54,21 +118,6 @@ class Accordion extends Block
             ->endRepeater();
 
         return $field->build();
-    }
-
-    /**
-     * Data to be passed to the rendered block.
-     *
-     * @return array
-     */
-    public function with()
-    {
-        return [
-            'items'     => $this->items(),
-            'type'      => 'single',                          // or: 'multiple'
-            'title_tag' => \get_field('title_tag') ?? 'h3',
-            'padding'   => 0,
-        ];
     }
 
     /**
