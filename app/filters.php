@@ -36,6 +36,7 @@ add_filter(
     }
 );
 
+// add_action( 'init_graphql_request',
 if (is_graphql()) {
     add_filter(
         'the_content',
@@ -89,4 +90,42 @@ add_filter(
         return $block_types;
     },
     10
+);
+
+add_action(
+    'graphql_register_types',
+    function () {
+        register_graphql_object_type(
+            'Redirect',
+            [
+                'description' => __("Redirecz", 'your-textdomain'),
+                'fields' => [
+                    'url' => [
+                        'type' => 'String',
+                        'description' => __('URL', 'your-textdomain'),
+                    ],
+                    'to' => [
+                        'type' => 'String',
+                        'description' => __('URL', 'your-textdomain'),
+                    ],
+                    'status' => [
+                        'type' => 'Integer',
+                        'description' => __('Status', 'your-textdomain'),
+                    ],
+                ],
+            ]
+        );
+
+        register_graphql_field(
+            'RootQuery',
+            'redirect',
+            [
+                'type'        => 'Redirect',
+                'description' => __('Current redirects', 'wp-graphql'),
+                'resolve'     => function ( $root, array $args ) {
+                    return [];
+                },
+            ]
+        );
+    }
 );
